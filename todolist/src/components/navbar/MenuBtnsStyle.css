@@ -1,0 +1,118 @@
+.menu-buttons-center {
+  flex: 1;
+  flex-shrink: 0;
+  background-color: #f2f1eb;
+  margin: 0.5rem 0;
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 0.25rem 0.5rem;
+  /* border: 1px solid blue; */
+}
+.menu-list li {
+  width: 100%;
+  margin: 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.menu-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border-color: transparent;
+  background-color: #c8d5b9;
+  font-size: 1.2rem;
+  color: #5b5f52;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.menu-btn:hover {
+  background-color: #b8c4a5;
+  color: rgb(41, 41, 41);
+}
+.active-menu-btn {
+  color: rgb(41, 41, 41);
+  background-color: #b8c4a5;
+}
+@media screen and (max-width: 479px) {
+  .menu-buttons-center {
+    margin: 0.25rem 0.5rem;
+    padding: 0;
+    overflow: hidden;
+  }
+  .menu-list {
+    flex-direction: row;
+    width: 100%;
+    padding: 0.25rem 0;
+    overflow-x: auto;
+    background-color: #e0dfd6;
+  }
+  .menu-list li {
+    margin: 0 0.25rem;
+  }
+  .menu-btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .menu-buttons-center {
+    padding: 0;
+    margin: 0.25rem 0.5rem;
+    overflow: hidden;
+  }
+  .menu-list {
+    flex-direction: row;
+    width: 100%;
+    padding: 0.25rem 0;
+    overflow-x: auto;
+    background-color: #e0dfd6;
+  }
+  .menu-list li {
+    margin: 0 0.25rem;
+  }
+  .menu-btn {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-buttons-center {
+    margin: 0.5rem 0;
+  }
+  .menu-list {
+    padding: 0.25rem 0.5rem;
+  }
+  .menu-btn {
+    padding: 0.75rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-buttons-center {
+    margin: 0.5rem 0;
+  }
+  .menu-list {
+    padding: 0.25rem 0.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .menu-buttons-center {
+    margin: 0.75rem 0;
+  }
+  .menu-list {
+    padding: 0.25rem 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu-buttons-center {
+    margin: 0.75rem 0;
+  }
+  .menu-list {
+    padding: 0.25rem 1.25rem;
+  }
+}

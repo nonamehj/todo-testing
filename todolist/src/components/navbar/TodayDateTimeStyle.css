@@ -1,0 +1,150 @@
+.today-date-time-center {
+  min-height: 30vh;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.35rem 0;
+  color: #333;
+  font-weight: bold;
+}
+.today-date-clock {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+}
+.time-center {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.time-am-pm {
+  margin-right: 0.25rem;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+@media screen and (max-width: 479px) {
+  .today-date-time-center {
+    flex-direction: row;
+    min-height: 5vh;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    margin-bottom: 0;
+  }
+  .today-date-clock {
+    margin: 0;
+    padding: 0.25rem;
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+  .time-center {
+    margin: 0;
+    padding: 0.25rem;
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+  .time-am-pm {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .today-date-time-center {
+    flex-direction: row;
+    min-height: 5vh;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    margin-bottom: 0;
+  }
+  .today-date-clock {
+    margin: 0;
+    padding: 0.25rem;
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+  .time-center {
+    margin: 0;
+    padding: 0.25rem;
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+  .time-am-pm {
+    margin-right: 0.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .today-date-time-center {
+    min-height: 30vh;
+    padding: 0.45rem 0;
+  }
+  .today-date-clock {
+    margin-top: 2rem;
+    margin-bottom: 0.3rem;
+    font-size: 1.5rem;
+  }
+  .time-center {
+    margin-bottom: 2rem;
+    padding-bottom: 0;
+    font-size: 1.5rem;
+  }
+  .time-am-pm {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .today-date-time-center {
+    min-height: 25vh;
+  }
+  .today-date-clock {
+    font-size: 1.6rem;
+  }
+  .time-center {
+    font-size: 1.6rem;
+  }
+  .time-am-pm {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .today-date-time-center {
+    min-height: 25vh;
+    padding: 0.45rem 0;
+  }
+  .today-date-clock {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+  }
+  .time-center {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+  .time-am-pm {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .today-date-time-center {
+    min-height: 25vh;
+    padding: 0.45rem 0;
+  }
+  .today-date-clock {
+    margin-top: 1.5rem;
+    font-size: 2.1rem;
+  }
+  .time-center {
+    margin-bottom: 1.5rem;
+    font-size: 2.1rem;
+  }
+  .time-am-pm {
+    font-size: 1.9rem;
+  }
+}

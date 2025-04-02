@@ -1,0 +1,103 @@
+.calendar-days-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* grid-auto-rows: 1fr; */
+  grid-auto-rows: minmax(50px, 1fr);
+  background-color: #f7f7f7;
+}
+
+.calendar-day-btn {
+  position: relative;
+  display: flex;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #f8f3e4;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #4f4b45;
+  cursor: pointer;
+}
+.calendar-day-btn.activeDay {
+  background-color: #bfaf9b;
+}
+.calendar-day-btn:hover {
+  background-color: #d5c8b6;
+}
+.agenda-day-underline {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 15%;
+}
+.completedDay .agenda-day-underline {
+  background-color: #a3a3a3;
+}
+.incompleteDay .agenda-day-underline {
+  background-color: #d08b5b;
+}
+/*오늘 요일 표시*/
+.activeDay .agenda-day-underline {
+  background-color: #c75c44;
+}
+/*오늘 완료 표시*/
+.activeDay.completedDay .agenda-day-underline {
+  background-color: #a3a3a3;
+}
+@media screen and (max-width: 479px) {
+  .calendar-days-container {
+    grid-auto-rows: minmax(50px, 1fr);
+  }
+  .calendar-day-btn {
+    padding: 0.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .calendar-days-container {
+    grid-auto-rows: minmax(50px, 1fr);
+  }
+  .calendar-day-btn {
+    padding: 0.25rem 0.35rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .calendar-days-container {
+    grid-auto-rows: minmax(70px, 1fr);
+  }
+  .calendar-day-btn {
+    padding: 0.25rem 0.45rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .calendar-days-container {
+    grid-auto-rows: minmax(70px, 1fr);
+  }
+  .calendar-day-btn {
+    padding: 0.25rem 0.45rem;
+    font-size: 1.05rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .calendar-days-container {
+    grid-auto-rows: minmax(70px, 1fr);
+  }
+  .calendar-day-btn {
+    padding: 0.35rem 0.55rem;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .calendar-days-container {
+    grid-auto-rows: minmax(70px, 1fr);
+  }
+  .calendar-day-btn {
+    padding: 0.35rem 0.55rem;
+    font-size: 1.15rem;
+  }
+}

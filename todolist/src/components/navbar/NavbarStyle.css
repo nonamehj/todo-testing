@@ -1,0 +1,29 @@
+nav {
+  background-color: #f2f1eb;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #f2f1eb;
+}
+@media screen and (max-width: 479px) {
+  .nav-container {
+    background-color: #e0dfd6;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .nav-container {
+    background-color: #e0dfd6;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav {
+    overflow-y: auto;
+  }
+  .nav-container {
+    padding: 0.5rem 0.25rem;
+  }
+}

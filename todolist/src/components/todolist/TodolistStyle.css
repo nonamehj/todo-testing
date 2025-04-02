@@ -1,0 +1,355 @@
+.todo-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #e0dfd6;
+  overflow: hidden;
+}
+.todo-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  overflow-y: auto;
+}
+.todo-title {
+  min-height: 30vh;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-title h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem;
+  font-size: 2rem;
+}
+.todo-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.form-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.todo-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  margin-right: 0.5rem;
+  color: #4f4b45;
+  background-color: #f2eee7;
+  border: 1px solid #b8b2a7;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+}
+.todo-input:focus {
+  border: 1px solid #b8b2a7;
+  outline: none;
+}
+.todo-input::placeholder {
+  font-size: 1rem;
+  color: #5b5f52;
+}
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  margin-right: 0.5rem;
+  height: 100%;
+  background-color: transparent;
+  border-color: transparent;
+  color: #5b5f52;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  color: #3e3b36;
+}
+.clear-btn {
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  background-color: #b8b2a7;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  color: #4f4b45;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+}
+.clear-btn:hover {
+  background-color: #a9a397;
+  color: #3e3b36;
+}
+.todo-empty-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  /*다시 확인하기 확인후 agednaform 에서도 수정*/
+  min-height: 40vh;
+  overflow-y: auto;
+}
+.todo-empty-message p {
+  padding: 0.5rem;
+  margin: 1rem;
+}
+@media screen and (max-width: 479px) {
+  .todo-container {
+    margin: 0.25rem 0.5rem;
+    padding: 0.25rem;
+  }
+  .todo-title {
+    min-height: 10vh;
+    margin: 0;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0;
+  }
+  .todo-title h3 {
+    padding: 0.25rem;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .todo-form {
+    margin: 0.25rem 0;
+  }
+
+  .todo-input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+  .todo-input::placeholder {
+    font-size: 0.9rem;
+  }
+  .submit-btn {
+    padding: 0.25rem;
+    margin-right: 0.25rem;
+    font-size: 1rem;
+  }
+  .clear-btn {
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .todo-empty-message {
+    font-size: 1.1rem;
+  }
+  .todo-empty-message p {
+    padding: 0.5rem;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .todo-container {
+    margin: 0.25rem 0.5rem;
+    padding: 0.5rem;
+  }
+  .todo-title {
+    min-height: 10vh;
+    margin: 0;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0;
+  }
+  .todo-title h3 {
+    padding: 0.25rem;
+    margin: 0;
+    font-size: 1.6rem;
+  }
+  .todo-form {
+    margin: 0.25rem 0;
+  }
+  .todo-input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.05rem;
+  }
+
+  .todo-input::placeholder {
+    font-size: 0.95rem;
+  }
+  .submit-btn {
+    padding: 0.25rem;
+    margin-right: 0.25rem;
+    font-size: 1.1rem;
+  }
+  .clear-btn {
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+    font-size: 1.05rem;
+  }
+  .todo-empty-message {
+    font-size: 1.2rem;
+  }
+  .todo-empty-message p {
+    padding: 0.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .todo-section {
+    overflow-y: auto;
+  }
+  .todo-container {
+    padding: 0.5rem 1rem;
+  }
+  .todo-title {
+    min-height: 30vh;
+  }
+  .todo-title h3 {
+    font-size: 2rem;
+    /**/
+    padding: 1rem;
+    margin: 2rem 1rem;
+  }
+  .todo-form {
+    margin: 0.5rem 0;
+  }
+  .todo-input {
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .todo-input::placeholder {
+    font-size: 1rem;
+  }
+  .submit-btn {
+    font-size: 1.2rem;
+  }
+  .clear-btn {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .todo-empty-message {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .todo-section {
+    overflow-y: auto;
+  }
+  .todo-container {
+    padding: 0.5rem 1.25rem;
+  }
+  .todo-title {
+    min-height: 25vh;
+  }
+  .todo-title h3 {
+    font-size: 2.1rem;
+    /**/
+    padding: 1rem;
+    margin: 2rem 1rem;
+  }
+  .todo-form {
+    margin: 0.5rem 0;
+  }
+  .todo-input {
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .todo-input::placeholder {
+    font-size: 1.05rem;
+  }
+  .submit-btn {
+    font-size: 1.3rem;
+  }
+
+  .clear-btn {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .todo-empty-message {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .todo-section {
+    overflow-y: auto;
+  }
+  .todo-container {
+    padding: 0.5rem 1.5rem;
+  }
+  .todo-title {
+    min-height: 25vh;
+  }
+  .todo-title h3 {
+    font-size: 2.2rem;
+    /**/
+    padding: 1rem;
+    margin: 2rem 1rem;
+  }
+  .todo-form {
+    margin: 0.75rem 0;
+  }
+  .todo-input {
+    padding: 0.75rem 1rem;
+    margin-right: 1rem;
+    font-size: 1.3rem;
+  }
+  .todo-input::placeholder {
+    font-size: 1.1rem;
+  }
+  .submit-btn {
+    font-size: 1.4rem;
+  }
+  .clear-btn {
+    padding: 0.75rem;
+    font-size: 1.3rem;
+  }
+  .todo-empty-message {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .todo-section {
+    overflow-y: auto;
+  }
+  .todo-container {
+    padding: 0.5rem 1.75rem;
+  }
+  .todo-title {
+    min-height: 25vh;
+  }
+  .todo-title h3 {
+    font-size: 2.3rem;
+    /**/
+    padding: 1rem;
+    margin: 2rem 1rem;
+  }
+  .todo-form {
+    margin: 0.75rem 0;
+  }
+  .todo-input {
+    padding: 0.75rem 1rem;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+  }
+  .todo-input::placeholder {
+    font-size: 1.15rem;
+  }
+  .submit-btn {
+    font-size: 1.5rem;
+  }
+  .clear-btn {
+    padding: 0.75rem;
+    font-size: 1.4rem;
+  }
+  .todo-empty-message {
+    font-size: 1.7rem;
+  }
+}

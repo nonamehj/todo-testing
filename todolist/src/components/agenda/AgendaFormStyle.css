@@ -1,0 +1,336 @@
+.agenda-form-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+.agenda-form-center {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #e0dfd6;
+  overflow-y: auto;
+}
+.agenda-form-title {
+  min-height: 30vh;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.agenda-form-title h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.agenda-modal-close {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border-color: transparent;
+  color: #7c7c6f;
+  cursor: pointer;
+}
+
+.agenda-modal-close:hover {
+  color: #5e5b4e;
+}
+.agenda-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+.form-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.agenda-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  margin-right: 0.5rem;
+  color: #4f4b45;
+  background-color: #f2eee7;
+  border: 1px solid #b8b2a7;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+}
+.agenda-input:focus {
+  border: 1px solid #b8b2a7;
+  outline: none;
+}
+.agenda-input::placeholder {
+  font-size: 1rem;
+  color: #5b5f52;
+}
+.delete-all-btn {
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: #b8b2a7;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  color: #4f4b45;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+}
+.delete-all-btn:hover {
+  background-color: #a9a397;
+  color: #3e3b36;
+}
+
+.agenda-empty-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  /*다시 확인하기 확인후 todolist 에서도 수정 */
+  min-height: 40vh;
+  overflow: auto;
+}
+.agenda-empty-message p {
+  padding: 0.25rem 0.5rem;
+  margin: 1rem;
+}
+.agenda-empty-message p:nth-child(1) {
+  margin: 0.5rem 0 0.1rem;
+}
+.agenda-empty-message p:nth-child(2) {
+  margin: 0.1rem 0 0.5rem;
+}
+@media screen and (max-width: 479px) {
+  .agenda-form-center {
+    padding: 0.25rem;
+  }
+  .agenda-form-title {
+    min-height: 10vh;
+    margin: 0;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0;
+  }
+  .agenda-form-title h3 {
+    padding: 0.25rem;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .agenda-modal-close {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+  .agenda-form {
+    margin: 0.25rem 0;
+  }
+  .agenda-input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+  .agenda-input::placeholder {
+    font-size: 0.9rem;
+  }
+  .delete-all-btn {
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .agenda-empty-message {
+    font-size: 1.1rem;
+  }
+  .agenda-empty-message p {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .agenda-form-center {
+    padding: 0.5rem;
+  }
+  .agenda-form-title {
+    min-height: 10vh;
+    margin: 0;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0;
+  }
+  .agenda-form-title h3 {
+    padding: 0.25rem;
+    margin: 0;
+    font-size: 1.6rem;
+  }
+  .agenda-modal-close {
+    margin-right: 1rem;
+    font-size: 1.1rem;
+  }
+  .agenda-form {
+    margin: 0.25rem 0;
+  }
+  .agenda-input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.05rem;
+  }
+  .agenda-input::placeholder {
+    font-size: 0.95rem;
+  }
+  .delete-all-btn {
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+    font-size: 1.05rem;
+  }
+  .agenda-empty-message {
+    font-size: 1.2rem;
+  }
+  .agenda-empty-message p {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .agenda-form-center {
+    padding: 0.5rem 1rem;
+  }
+  .agenda-form-title h3 {
+    font-size: 2rem;
+  }
+  .agenda-modal-close {
+    margin-right: 1.5rem;
+    font-size: 1.2rem;
+  }
+  .agenda-form {
+    margin: 0.5rem 0;
+  }
+  .agenda-input {
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .agenda-input::placeholder {
+    font-size: 1rem;
+  }
+  .delete-all-btn {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .agenda-empty-message {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .agenda-form-center {
+    padding: 0.5rem 1.25rem;
+  }
+  .agenda-form-title h3 {
+    font-size: 2.1rem;
+  }
+  .agenda-modal-close {
+    margin-right: 2rem;
+    font-size: 1.3rem;
+  }
+  .agenda-form {
+    margin: 0.5rem 0;
+  }
+  .agenda-input {
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .agenda-input::placeholder {
+    font-size: 1.05rem;
+  }
+  .delete-all-btn {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .agenda-empty-message {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .agenda-form-center {
+    padding: 0.5rem 1.5rem;
+  }
+  .agenda-form-title h3 {
+    font-size: 2.2rem;
+  }
+  .agenda-modal-close {
+    margin-right: 2.5rem;
+    font-size: 1.4rem;
+  }
+  .agenda-form {
+    margin: 0.75rem 0;
+  }
+  .agenda-input {
+    padding: 0.75rem 1rem;
+    margin-right: 1rem;
+    font-size: 1.3rem;
+  }
+  .agenda-input::placeholder {
+    font-size: 1.1rem;
+  }
+  .delete-all-btn {
+    padding: 0.75rem;
+    font-size: 1.3rem;
+  }
+  .agenda-empty-message {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .agenda-form-center {
+    padding: 0.5rem 1.75rem;
+  }
+  .agenda-form-title h3 {
+    font-size: 2.3rem;
+  }
+  .agenda-modal-close {
+    margin-right: 3rem;
+    font-size: 1.5rem;
+  }
+  .agenda-form {
+    margin: 0.75rem 0;
+  }
+  .agenda-input {
+    padding: 0.75rem 1rem;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+  }
+  .agenda-input::placeholder {
+    font-size: 1.15rem;
+  }
+  .delete-all-btn {
+    padding: 0.75rem;
+    font-size: 1.4rem;
+  }
+  .agenda-empty-message {
+    font-size: 1.7rem;
+  }
+}
