@@ -4,7 +4,6 @@ import { useGlobalContext } from "../../context";
 import { useListGlobalContext } from "./../../listContext";
 
 const useHomeData = () => {
-  // const [today] = useState(new Date());
   const { today } = useGlobalContext();
   const formattedDate = useMemo(
     () =>

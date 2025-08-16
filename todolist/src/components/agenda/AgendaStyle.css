@@ -25,10 +25,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
-  margin: 1rem;
+  margin: 2rem 1rem;
+  padding: 1rem;
   font-size: 2rem;
 }
+
 .agenda-header button {
   display: flex;
   justify-content: center;
@@ -67,7 +68,8 @@
 .highlight-today,
 .highlight-deadline,
 .highlight-in-progress,
-.highlight-completed {
+.highlight-completed,
+.highlight-in-overdue {
   padding: 0.5rem;
   margin-right: 0.25rem;
 }
@@ -77,13 +79,15 @@
 .highlight-in-progress {
   background-color: #d08b5b;
 }
-.highlight-completed {
-  background-color: #a3a3a3;
-}
 .highlight-deadline {
   background-color: #c75c44;
 }
-
+.highlight-in-overdue {
+  background-color: #8c3d2e;
+}
+.highlight-completed {
+  background-color: #a3a3a3;
+}
 .calendar-container {
   flex: 1;
   flex-shrink: 0;
@@ -111,10 +115,8 @@
   font-weight: bold;
   color: #4f4b45;
 }
+
 @media screen and (max-width: 479px) {
-  .agenda-section {
-    /* overflow-y: auto; */
-  }
   .agenda-container {
     margin: 0.25rem 0.5rem;
     padding: 0.25rem;
@@ -141,16 +143,22 @@
   .agenda-status {
     font-size: 0.9rem;
   }
-
   .calendar-week {
     padding: 0.5rem 0.25rem;
     font-size: 1rem;
   }
 }
+@media screen and (max-width: 314px) {
+  .agenda-header h3 {
+    margin: 0;
+    padding: 0.25rem;
+    font-size: 1.4rem;
+  }
+}
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .agenda-container {
     margin: 0.25rem 0.5rem;
-    padding: 0.25rem;
+    padding: 0.5rem;
   }
   .agenda-header {
     min-height: 10vh;
@@ -159,8 +167,8 @@
     padding: 0.25rem 0;
   }
   .agenda-header h3 {
-    padding: 0.25rem;
     margin: 0;
+    padding: 0.25rem;
     font-size: 1.6rem;
   }
   .agenda-header button {
@@ -191,9 +199,6 @@
   }
   .agenda-header h3 {
     font-size: 2rem;
-    /**/
-    padding: 1rem;
-    margin: 2rem 1rem;
   }
   .agenda-header button {
     font-size: 1.3rem;
@@ -219,9 +224,6 @@
   }
   .agenda-header h3 {
     font-size: 2.1rem;
-    /**/
-    padding: 1rem;
-    margin: 2rem 1rem;
   }
   .agenda-header button {
     font-size: 1.4rem;
@@ -247,10 +249,6 @@
   }
   .agenda-header h3 {
     font-size: 2.2rem;
-    /**/
-    padding: 1rem;
-    /* margin: 1.5rem 1rem; */
-    margin: 2rem 1rem;
   }
   .agenda-header button {
     font-size: 1.5rem;
@@ -276,8 +274,6 @@
   }
   .agenda-header h3 {
     font-size: 2.3rem;
-    padding: 1rem;
-    margin: 2rem 1rem;
   }
   .agenda-header button {
     font-size: 1.6rem;

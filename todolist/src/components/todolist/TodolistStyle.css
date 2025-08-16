@@ -24,8 +24,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
-  margin: 1rem;
+  margin: 2rem 1rem;
+  padding: 1rem;
   font-size: 2rem;
 }
 .todo-form {
@@ -98,12 +98,11 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  min-height: 40vh;
+  min-height: 150px;
   font-size: 1.4rem;
   font-weight: bold;
   border-radius: 0.25rem;
-  /*다시 확인하기 확인후 agednaform 에서도 수정*/
-  min-height: 40vh;
-  overflow-y: auto;
 }
 .todo-empty-message p {
   padding: 0.5rem;
@@ -121,14 +120,13 @@
     padding: 0.25rem 0;
   }
   .todo-title h3 {
-    padding: 0.25rem;
     margin: 0;
+    padding: 0.25rem;
     font-size: 1.5rem;
   }
   .todo-form {
     margin: 0.25rem 0;
   }
-
   .todo-input {
     padding: 0.5rem;
     margin-right: 0.5rem;
@@ -166,8 +164,8 @@
     padding: 0.25rem 0;
   }
   .todo-title h3 {
-    padding: 0.25rem;
     margin: 0;
+    padding: 0.25rem;
     font-size: 1.6rem;
   }
   .todo-form {
@@ -178,7 +176,6 @@
     margin-right: 0.5rem;
     font-size: 1.05rem;
   }
-
   .todo-input::placeholder {
     font-size: 0.95rem;
   }
@@ -211,9 +208,6 @@
   }
   .todo-title h3 {
     font-size: 2rem;
-    /**/
-    padding: 1rem;
-    margin: 2rem 1rem;
   }
   .todo-form {
     margin: 0.5rem 0;
@@ -250,9 +244,6 @@
   }
   .todo-title h3 {
     font-size: 2.1rem;
-    /**/
-    padding: 1rem;
-    margin: 2rem 1rem;
   }
   .todo-form {
     margin: 0.5rem 0;
@@ -289,9 +280,6 @@
   }
   .todo-title h3 {
     font-size: 2.2rem;
-    /**/
-    padding: 1rem;
-    margin: 2rem 1rem;
   }
   .todo-form {
     margin: 0.75rem 0;
@@ -327,9 +315,6 @@
   }
   .todo-title h3 {
     font-size: 2.3rem;
-    /**/
-    padding: 1rem;
-    margin: 2rem 1rem;
   }
   .todo-form {
     margin: 0.75rem 0;

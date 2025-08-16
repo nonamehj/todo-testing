@@ -1,7 +1,7 @@
 import "./index.css";
 import Home from "./components/home/Home";
 import Agenda from "./components/agenda/Agenda";
-import Todolist from "./components/todolist/Todolist";
+import TodoList from "./components/todolist/TodoList";
 import Navbar from "./components/navbar/Navbar";
 import { useEffect } from "react";
 import { useGlobalContext } from "./context";
@@ -38,7 +38,7 @@ function App() {
         <div className="main-wrapper">
           <Navbar />
           {menuItems[0].activeMenu && <Home />}
-          {menuItems[1].activeMenu && <Todolist />}
+          {menuItems[1].activeMenu && <TodoList />}
           {menuItems[2].activeMenu && <Agenda />}
         </div>
       </div>

@@ -30,10 +30,10 @@ const Agenda = () => {
         </div>
         <div className="agenda-calendar">
           <div className="agenda-status">
-            {/* <p>* color : what ?</p> */}
             <p>오늘</p> <span className="highlight-today"></span>
-            <p>마감일</p> <span className="highlight-deadline"></span>
-            <p>진행중</p> <span className="highlight-in-progress"></span>
+            <p>진행</p> <span className="highlight-in-progress"></span>
+            <p>마감</p> <span className="highlight-deadline"></span>
+            <p>지연</p> <span className="highlight-in-overdue"></span>
             <p>완료</p> <span className="highlight-completed"></span>
           </div>
           <div className="calendar-container">

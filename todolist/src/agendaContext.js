@@ -38,7 +38,9 @@ const AppProvider = ({ children }) => {
   const [isEditing, setIsEditing] = useState(false); /*수정할때 블린값 */
   const editRef = useRef();
 
+  // console.log("agendalist", agendaList);
   // localStorage.clear();
+
   /*달력 만들기 */
   /* 왜 useMemo로 하면 에러 useCallback으로 체인지*/
   const getFirstDayOfMonth = useCallback((date) => {
@@ -287,16 +289,22 @@ const AppProvider = ({ children }) => {
       setSelectedAgendaItems(formItems);
     }
   }, [selectedDate, agendaList]);
+
   /*이전 다음 달 클릭시 현재 달에 일치하면 그 요일선택 */
   useEffect(() => {
     if (
       currentDate.getFullYear() === today.getFullYear() &&
-      currentDate.getMonth() === today.getMonth() &&
-      currentDate.getDate() === 1
+      currentDate.getMonth() === today.getMonth()
+      // &&      currentDate.getDate() === 1
     ) {
-      setCurrentDate(
-        new Date(today.getFullYear(), today.getMonth(), today.getDate())
-      );
+      // setCurrentDate(
+      //   new Date(today.getFullYear(), today.getMonth(), today.getDate())
+      // );
+      if (currentDate.getDate() !== today.getDate()) {
+        setCurrentDate(
+          new Date(today.getFullYear(), today.getMonth(), today.getDate())
+        );
+      }
     }
   }, [currentDate, today]);
   return (

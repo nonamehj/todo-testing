@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useGlobalContext } from "../../context";
 import "./HomeStyle.css";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
@@ -6,6 +6,11 @@ import NotePad from "./NotePad";
 import PreviewAgenda from "./PreviewAgenda";
 import PreviewList from "./PreviewList";
 import useHomeData from "./useHomeData";
+
+const getNotePadLocalStorage = () => {
+  let notePadItem = localStorage.getItem("notePadItem");
+  return notePadItem ? JSON.parse(notePadItem) : [];
+};
 
 const Home = () => {
   const {
@@ -19,9 +24,8 @@ const Home = () => {
     agendaProgress,
   } = useHomeData();
   const { today, setMenuItems } = useGlobalContext();
-  const [textValue, setTextValue] = useState("");
+  const [textValue, setTextValue] = useState(getNotePadLocalStorage());
   const [isMemoOpen, setIsMemoOPen] = useState(true);
-
   const toggleMenu = (name) => {
     setMenuItems((prevMenu) =>
       prevMenu.map((item) =>
@@ -31,6 +35,11 @@ const Home = () => {
       )
     );
   };
+
+  useEffect(() => {
+    localStorage.setItem("notePadItem", JSON.stringify(textValue));
+  }, [textValue]);
+
   return (
     <section className="home-section">
       <div className="home-container">
@@ -43,7 +52,6 @@ const Home = () => {
             onClick={() => setIsMemoOPen(!isMemoOpen)}
           >
             <p>메모장</p>
-            {/* <span>{`${isMemoOpen ? "닫기▲" : "열기▼"}`}</span> */}
             <span>
               {isMemoOpen ? (
                 <FaAngleUp className="icon" />

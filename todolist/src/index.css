@@ -5,7 +5,27 @@
   text-decoration: none;
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
+  /*파이어폭스 스크롤 디자인*/
+  scrollbar-width: thin;
+  scrollbar-color: rgb(180, 180, 180) rgb(40, 40, 40);
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #e0dfd6;
+}
+::-webkit-scrollbar-thumb {
+  background: #a6a49b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #88877f;
+}
+
 body {
   background-color: #f0f0f0;
   color: #333;
@@ -13,27 +33,19 @@ body {
 main {
   width: 100%;
   height: calc(var(--vh) * 100);
-  overflow: hidden;
   background-color: #ffffff;
-  /* border: 1px solid red; */
+  overflow: hidden;
 }
 
 .main-container {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   width: 100%;
   height: 100%;
-  /* overflow-y: auto; */
 }
 .main-wrapper {
   flex: 1;
-
-  /* width: 100%; */
-  /* height: 100%; */
   color: #444;
   background-color: #f9f9f7;
-  /* border: 1px solid blue; */
 }
 @media screen and (max-width: 479px) {
   .main-container {
@@ -42,7 +54,6 @@ main {
 
   .main-wrapper {
     display: flex;
-    /* height: 100%; */
     flex-direction: column;
   }
 }

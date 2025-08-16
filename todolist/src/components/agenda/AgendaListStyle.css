@@ -2,6 +2,7 @@
   flex: 1;
   flex-shrink: 0;
   min-height: 40vh;
+  min-height: 150px;
   width: 100%;
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;

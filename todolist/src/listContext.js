@@ -12,10 +12,6 @@ const AppContext = createContext();
 
 const getListLocalStorage = () => {
   let todoItems = localStorage.getItem("todoItems");
-  // if (todoItems) {
-  //   todoItems = JSON.parse(localStorage.getItem("todoItems"));
-  // }
-  // return [];
   return todoItems ? JSON.parse(todoItems) : [];
 };
 
@@ -27,7 +23,7 @@ const AppProvider = ({ children }) => {
   const [editId, setEditId] = useState(null);
   const editRef = useRef();
 
-  /*폼 양식 */
+  //폼 양식
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!items) {
@@ -52,13 +48,13 @@ const AppProvider = ({ children }) => {
         isChecked: false,
         isCompleted: false,
       };
-      // setList([...list, newItem]);
+
       setList((prev) => [...prev, newItem]);
       showAlert(true, "success", "항목이 추가되었습니다");
       setItems("");
     }
   };
-  /*폼 체크박스 */
+  //폼 체크박스
   const toggleCheckBox = (id) => {
     setList((prev) =>
       prev.map((item) =>
@@ -66,7 +62,7 @@ const AppProvider = ({ children }) => {
       )
     );
   };
-  /*폼 액션(삭제 와 완료) */
+  //폼 액션(삭제 와 완료)
   const handleAction = (isChecked, isCompleted, id) => {
     if (!isCompleted && isChecked) {
       removeItem(id);
@@ -76,7 +72,7 @@ const AppProvider = ({ children }) => {
       completeItem(id);
     }
   };
-  /* 폼 완료*/
+  //폼 완료
   const completeItem = (id) => {
     const tempItem = list.map((item) =>
       item.id === id ? { ...item, isChecked: true, isCompleted: true } : item
@@ -84,14 +80,14 @@ const AppProvider = ({ children }) => {
     setList(tempItem);
     showAlert(true, "success", "항목을 완료했습니다");
   };
-  /* 폼 삭제 */
+  //폼 삭제
   const removeItem = (id) => {
     const tempItem = list.filter((item) => item.id !== id);
     setList(tempItem);
     showAlert(true, "danger", "항목을 삭제했습니다");
   };
 
-  /*폼 수정 */
+  //폼 수정
   const editItem = (id) => {
     const tempItem = list.find((item) => item.id === id);
     setItems(tempItem.title);
@@ -100,14 +96,13 @@ const AppProvider = ({ children }) => {
     editRef.current.focus();
   };
 
-  /* */
-
-  /*폼 전체 삭제*/
+  //폼 전체 삭제
   const clearList = useCallback(() => {
     setList([]);
     showAlert(true, "danger", "모든 항목을 삭제했습니다");
   }, [showAlert]);
-  /*localstorage useEffect */
+
+  //localstorage useEffect
   useEffect(() => {
     localStorage.setItem("todoItems", JSON.stringify(list));
   }, [list]);

@@ -30,8 +30,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
   margin: 1rem;
+  padding: 1rem;
   font-size: 2rem;
 }
 
@@ -109,13 +109,12 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  min-height: 40vh;
+  min-height: 150px;
   width: 100%;
   font-size: 1.4rem;
   font-weight: bold;
   border-radius: 0.25rem;
-  /*다시 확인하기 확인후 todolist 에서도 수정 */
-  min-height: 40vh;
-  overflow: auto;
 }
 .agenda-empty-message p {
   padding: 0.25rem 0.5rem;
@@ -138,8 +137,8 @@
     padding: 0.25rem 0;
   }
   .agenda-form-title h3 {
-    padding: 0.25rem;
     margin: 0;
+    padding: 0.25rem;
     font-size: 1.5rem;
   }
   .agenda-modal-close {
@@ -217,6 +216,9 @@
   .agenda-form-center {
     padding: 0.5rem 1rem;
   }
+  .agenda-form-title {
+    min-height: 30vh;
+  }
   .agenda-form-title h3 {
     font-size: 2rem;
   }
@@ -246,6 +248,9 @@
 @media screen and (min-width: 1024px) {
   .agenda-form-center {
     padding: 0.5rem 1.25rem;
+  }
+  .agenda-form-title {
+    min-height: 25vh;
   }
   .agenda-form-title h3 {
     font-size: 2.1rem;
@@ -278,6 +283,9 @@
   .agenda-form-center {
     padding: 0.5rem 1.5rem;
   }
+  .agenda-form-title {
+    min-height: 25vh;
+  }
   .agenda-form-title h3 {
     font-size: 2.2rem;
   }
@@ -307,6 +315,9 @@
 @media screen and (min-width: 1440px) {
   .agenda-form-center {
     padding: 0.5rem 1.75rem;
+  }
+  .agenda-form-title {
+    min-height: 25vh;
   }
   .agenda-form-title h3 {
     font-size: 2.3rem;

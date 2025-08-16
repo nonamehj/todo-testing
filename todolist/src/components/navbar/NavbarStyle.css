@@ -21,7 +21,7 @@ nav {
 }
 @media screen and (min-width: 768px) {
   nav {
-    overflow-y: auto;
+    overflow-y: overlay;
   }
   .nav-container {
     padding: 0.5rem 0.25rem;

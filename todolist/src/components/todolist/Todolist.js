@@ -1,5 +1,5 @@
 import React from "react";
-import "./TodolistStyle.css";
+import "./TodoListStyle.css";
 import { useGlobalContext } from "../../context";
 import { useListGlobalContext } from "../../listContext";
 import Alert from "../alert/Alert";

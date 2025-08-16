@@ -11,13 +11,12 @@ const NotePad = ({ textValue, setTextValue }) => {
   return (
     <div className="home-notepad">
       <textarea
-        name="notepad"
-        // id="notepad"
-        className="notepad"
+        name="notepad-textarea"
+        className="notepad-textarea"
         placeholder="중요한 메모를 남겨보세요"
         value={textValue}
         onChange={(e) => handleNotePad(e)}
-      ></textarea>
+      />
     </div>
   );
 };

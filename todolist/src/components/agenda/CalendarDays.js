@@ -1,10 +1,11 @@
 import React, { useMemo } from "react";
 import "./CalendarDaysStyle.css";
 import { useAgendaGlobalContext } from "./../../agendaContext";
+import { useGlobalContext } from "../../context";
 const CalendarDays = () => {
   const { currentDate, getCalendarDays, calendarModalOpen, agendaList } =
     useAgendaGlobalContext();
-
+  const { today } = useGlobalContext();
   /*클래스 함수 일단 괜춘  전체적인거 다 확인후 삭제 */
   /*리스트에 작성된거 표시 */
   let getAgendaCheckList = useMemo(() => {
@@ -22,6 +23,8 @@ const CalendarDays = () => {
         const isCompleted = isAllCompleted
           ? isAllCompleted.items.every((item) => item.isCompleted)
           : false;
+        const isOverdue =
+          day?.toLocaleDateString() < today.toLocaleDateString();
 
         return (
           <button
@@ -37,12 +40,10 @@ const CalendarDays = () => {
                 : isAllCompleted
                 ? "incompleteDay"
                 : ""
-            }`}
-            // disabled={day === null ? true : false}
+            }  ${isOverdue ? "OverdueDay" : ""}`}
             disabled={!day}
             onClick={() => calendarModalOpen(day)}
           >
-            {/* <p>{day ? day.getDate() : ""}</p> */}
             <p>
               {day
                 ? day.getMonth() === currentDate.getMonth()

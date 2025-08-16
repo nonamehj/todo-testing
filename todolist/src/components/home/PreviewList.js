@@ -13,7 +13,6 @@ const PreviewList = () => {
               <p className="todo-mini-contents">
                 {title.length > 70 ? `${title.slice(0, 70)} ...` : title}
               </p>
-              {/* <p>{title}</p> */}
             </li>
           );
         })}
